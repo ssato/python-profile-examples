@@ -45,7 +45,7 @@ def load_from_py(mod_name, fun_name='cards'):
     return getattr(mod, fun_name, None)
 
 
-def show_with_time(times, cards_fn, suites, numbers):
+def show_with_time(times, cards_fn, suites, numbers, print_results=False):
     """A decorator to show reuslts and time elapsed.
     """
     start = timeit.default_timer()
@@ -53,7 +53,8 @@ def show_with_time(times, cards_fn, suites, numbers):
         cards = cards_fn(suites, numbers)
     end = timeit.default_timer()
     print(datetime.timedelta(seconds=(end - start)))
-    print(f'cards: {cards!r}')
+    if print_results:
+        print(f'cards: {sorted(cards)!r}')
 
 
 @click.command()
@@ -68,19 +69,23 @@ def show_with_time(times, cards_fn, suites, numbers):
     '--collection-type', type=click.Choice(['list', 'tuple', 'frozenset']),
     default='frozenset'
 )
-def show_cards(times=DEFAULT_TIMES, module='', collection_type='frozenset'):
+@click.option(
+    '--print-results', is_flag=True, help='Print out computed results also'
+)
+def show_cards(times=DEFAULT_TIMES, module='', collection_type='frozenset',
+               print_results=False):
     """Show cards in various ways.
     """
     sns = SNS_MAP[collection_type]
     if module:
         cards_fn = load_from_py(module)
         print(f'## module: {module}')
-        show_with_time(times, cards_fn, *sns)
+        show_with_time(times, cards_fn, *sns, print_results=print_results)
     else:
         for mod_name in list_modules():
             cards_fn = load_from_py(mod_name)
             print(f'## module: {mod_name}')
-            show_with_time(times, cards_fn, *sns)
+            show_with_time(times, cards_fn, *sns, print_results=print_results)
 
 
 if __name__ == '__main__':
