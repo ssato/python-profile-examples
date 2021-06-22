@@ -1,128 +1,197 @@
 ssato@x1-carbon-gen6% tox -e profile                                                                                               ~/repos/public/github.com/ssato/python-profile-examples.git
 GLOB sdist-make: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/setup.py
 profile inst-nodeps: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/.tmp/package/1/profile_examples-0.1.0.zip
-profile installed: astroid==2.5.6,attrs==21.2.0,certifi==2021.5.30,chardet==4.0.0,click==8.0.1,coverage==5.5,coveralls==3.1.0,docopt==0.6.2,execnet==1.9.0,flake8==3.9.2,gprof2dot==2021.2.21,idna==2.10,importlib-metadata==4.5.0,iniconfig==1.1.1,isort==5.9.1,lazy-object-proxy==1.6.0,mccabe==0.6.1,packaging==20.9,pluggy==0.13.1,profile-examples @ file:///home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/.tmp/package/1/profile_examples-0.1.0.zip,psutil==5.8.0,py==1.10.0,pycodestyle==2.7.0,pyflakes==2.3.1,pylint==2.8.3,pyparsing==2.4.7,pytest==6.2.4,pytest-cov==2.12.1,pytest-forked==1.3.0,pytest-profiling==1.7.0,pytest-randomly==3.8.0,pytest-xdist==2.3.0,requests==2.25.1,six==1.16.0,toml==0.10.2,urllib3==1.26.5,wrapt==1.12.1,zipp==3.4.1
-profile run-test-pre: PYTHONHASHSEED='2793268897'
+profile installed: astroid==2.5.6,attrs==21.2.0,backcall==0.2.0,certifi==2021.5.30,chardet==4.0.0,click==8.0.1,coverage==5.5,coveralls==3.1.0,decorator==5.0.9,docopt==0.6.2,execnet==1.9.0,flake8==3.9.2,gprof2dot==2021.2.21,idna==2.10,importlib-metadata==4.5.0,iniconfig==1.1.1,ipython==7.24.1,ipython-genutils==0.2.0,isort==5.9.1,jedi==0.18.0,lazy-object-proxy==1.6.0,line-profiler==3.3.0,matplotlib-inline==0.1.2,mccabe==0.6.1,packaging==20.9,parso==0.8.2,pexpect==4.8.0,pickleshare==0.7.5,pluggy==0.13.1,profile-examples @ file:///home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/.tmp/package/1/profile_examples-0.1.0.zip,prompt-toolkit==3.0.19,psutil==5.8.0,ptyprocess==0.7.0,py==1.10.0,pycodestyle==2.7.0,pyflakes==2.3.1,Pygments==2.9.0,pylint==2.8.3,pyparsing==2.4.7,pytest==6.2.4,pytest-cov==2.12.1,pytest-forked==1.3.0,pytest-profiling==1.7.0,pytest-randomly==3.8.0,pytest-xdist==2.3.0,requests==2.25.1,six==1.16.0,toml==0.10.2,traitlets==5.0.5,urllib3==1.26.5,wcwidth==0.2.5,wrapt==1.12.1,zipp==3.4.1
+profile run-test-pre: PYTHONHASHSEED='791764908'
 profile run-test: commands[0] | cards --times 10000
 ## module: ng_1
-0:00:00.093913
+0:00:00.093208
 ## module: ng_2
-0:00:00.063061
+0:00:00.060764
 ## module: ok_1
-0:00:00.056446
+0:00:00.055140
 ## module: ok_2
-0:00:00.051384
+0:00:00.051406
 ## module: ok_3
-0:00:00.057021
+0:00:00.055988
 profile run-test: commands[1] | cards --times 10000 --collection-type list
 ## module: ng_1
-0:00:00.095363
+0:00:00.092063
 ## module: ng_2
-0:00:00.058995
+0:00:00.057688
 ## module: ok_1
-0:00:00.053950
+0:00:00.052961
 ## module: ok_2
-0:00:00.052151
+0:00:00.050718
 ## module: ok_3
-0:00:00.053861
+0:00:00.052689
 profile run-test: commands[2] | cards --times 10000 --collection-type tuple
 ## module: ng_1
-0:00:00.095122
+0:00:00.092317
 ## module: ng_2
-0:00:00.057994
+0:00:00.058678
 ## module: ok_1
-0:00:00.055102
+0:00:00.053169
 ## module: ok_2
-0:00:00.050027
+0:00:00.050222
 ## module: ok_3
-0:00:00.053179
-profile run-test: commands[3] | cards --times 10000 --profile
+0:00:00.052859
+profile run-test: commands[3] | cards --times 10000 --profiler cProfile
 ## module: ng_1
-         580004 function calls in 0.170 seconds
+         580002 function calls in 0.165 seconds
 
    Ordered by: standard name
 
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-        1    0.000    0.000    0.170    0.170 cProfile.py:106(runcall)
-    10000    0.130    0.000    0.165    0.000 ng_1.py:5(cards)
-        1    0.006    0.006    0.170    0.170 prof.py:20(run_fun_times)
+    10000    0.127    0.000    0.160    0.000 ng_1.py:5(cards)
+        1    0.005    0.005    0.165    0.165 prof.py:22(run_fun_times)
     50000    0.003    0.000    0.003    0.000 {built-in method builtins.len}
-   520000    0.031    0.000    0.031    0.000 {method 'append' of 'list' objects}
+   520000    0.030    0.000    0.030    0.000 {method 'append' of 'list' objects}
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
-        1    0.000    0.000    0.000    0.000 {method 'enable' of '_lsprof.Profiler' objects}
 
 
 ## module: ng_2
-         530004 function calls in 0.130 seconds
+         530002 function calls in 0.129 seconds
 
    Ordered by: standard name
 
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-        1    0.000    0.000    0.130    0.130 cProfile.py:106(runcall)
-    10000    0.094    0.000    0.125    0.000 ng_2.py:5(cards)
-        1    0.005    0.005    0.130    0.130 prof.py:20(run_fun_times)
-   520000    0.031    0.000    0.031    0.000 {method 'append' of 'list' objects}
+    10000    0.094    0.000    0.123    0.000 ng_2.py:5(cards)
+        1    0.005    0.005    0.129    0.129 prof.py:22(run_fun_times)
+   520000    0.030    0.000    0.030    0.000 {method 'append' of 'list' objects}
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
-        1    0.000    0.000    0.000    0.000 {method 'enable' of '_lsprof.Profiler' objects}
 
 
 ## module: ok_1
-         540004 function calls in 0.127 seconds
+         540002 function calls in 0.117 seconds
 
    Ordered by: standard name
 
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-        1    0.000    0.000    0.127    0.127 cProfile.py:106(runcall)
-    10000    0.047    0.000    0.121    0.000 ok_1.py:12(cards)
-   530000    0.074    0.000    0.074    0.000 ok_1.py:5(each_card)
-        1    0.006    0.006    0.127    0.127 prof.py:20(run_fun_times)
+    10000    0.043    0.000    0.112    0.000 ok_1.py:12(cards)
+   530000    0.069    0.000    0.069    0.000 ok_1.py:5(each_card)
+        1    0.005    0.005    0.117    0.117 prof.py:22(run_fun_times)
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
-        1    0.000    0.000    0.000    0.000 {method 'enable' of '_lsprof.Profiler' objects}
 
 
 ## module: ok_2
-         20004 function calls in 0.058 seconds
+         20002 function calls in 0.055 seconds
 
    Ordered by: standard name
 
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-        1    0.000    0.000    0.058    0.058 cProfile.py:106(runcall)
-    10000    0.007    0.000    0.052    0.000 ok_2.py:6(cards)
-    10000    0.045    0.000    0.045    0.000 ok_2.py:8(<listcomp>)
-        1    0.006    0.006    0.058    0.058 prof.py:20(run_fun_times)
+    10000    0.006    0.000    0.050    0.000 ok_2.py:6(cards)
+    10000    0.044    0.000    0.044    0.000 ok_2.py:8(<listcomp>)
+        1    0.005    0.005    0.055    0.055 prof.py:22(run_fun_times)
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
-        1    0.000    0.000    0.000    0.000 {method 'enable' of '_lsprof.Profiler' objects}
 
 
 ## module: ok_3
-         540004 function calls in 0.123 seconds
+         540002 function calls in 0.117 seconds
 
    Ordered by: standard name
 
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-        1    0.000    0.000    0.123    0.123 cProfile.py:106(runcall)
-    10000    0.046    0.000    0.118    0.000 ok_3.py:12(cards)
-   530000    0.072    0.000    0.072    0.000 ok_3.py:5(each_card)
-        1    0.006    0.006    0.123    0.123 prof.py:20(run_fun_times)
+    10000    0.043    0.000    0.112    0.000 ok_3.py:12(cards)
+   530000    0.068    0.000    0.068    0.000 ok_3.py:5(each_card)
+        1    0.005    0.005    0.117    0.117 prof.py:22(run_fun_times)
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
-        1    0.000    0.000    0.000    0.000 {method 'enable' of '_lsprof.Profiler' objects}
 
 
-profile run-test: commands[4] | cards --times 10000 --print-results
+profile run-test: commands[4] | cards --times 10000 --profiler line_profiler
 ## module: ng_1
-0:00:00.096877
+Timer unit: 1e-06 s
+
+Total time: 0.570473 s
+File: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/profile/lib/python3.9/site-packages/profile_examples/a_deck_of_cards/ng_1.py
+Function: cards at line 5
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+     5                                           def cards(suites, numbers):
+     6                                               """Cards generator."""
+     7     10000       3217.0      0.3      0.6      res = []
+     8     10000       5629.0      0.6      1.0      (suites, numbers) = (list(suites), list(numbers))
+     9     50000      15997.0      0.3      2.8      for i in range(len(suites)):
+    10    560000     160132.0      0.3     28.1          for j in range(len(numbers)):
+    11    520000     207393.0      0.4     36.4              card = suites[i] + ' ' + numbers[j]
+    12    520000     175665.0      0.3     30.8              res.append(card)
+    13
+    14     10000       2440.0      0.2      0.4      return res
+
+## module: ng_2
+Timer unit: 1e-06 s
+
+Total time: 0.502086 s
+File: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/profile/lib/python3.9/site-packages/profile_examples/a_deck_of_cards/ng_2.py
+Function: cards at line 5
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+     5                                           def cards(suites, numbers):
+     6                                               """Cards generator."""
+     7     10000       3041.0      0.3      0.6      res = []
+     8     50000      14114.0      0.3      2.8      for suite in suites:
+     9    560000     149178.0      0.3     29.7          for number in numbers:
+    10    520000     166297.0      0.3     33.1              card = f'{suite} {number}'
+    11    520000     167112.0      0.3     33.3              res.append(card)
+    12
+    13     10000       2344.0      0.2      0.5      return res
+
+## module: ok_1
+Timer unit: 1e-06 s
+
+Total time: 0.212936 s
+File: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/profile/lib/python3.9/site-packages/profile_examples/a_deck_of_cards/ok_1.py
+Function: cards at line 12
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    12                                           def cards(suites, numbers):
+    13                                               """Cards generator."""
+    14     10000     212936.0     21.3    100.0      return list(each_card(suites, numbers))
+
+## module: ok_2
+Timer unit: 1e-06 s
+
+Total time: 0.100869 s
+File: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/profile/lib/python3.9/site-packages/profile_examples/a_deck_of_cards/ok_2.py
+Function: cards at line 6
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+     6                                           def cards(suites, numbers):
+     7                                               """Cards generator."""
+     8     10000     100869.0     10.1    100.0      return [f'{s} {n}' for s, n in itertools.product(suites, numbers)]
+
+## module: ok_3
+Timer unit: 1e-06 s
+
+Total time: 0.21023 s
+File: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/profile/lib/python3.9/site-packages/profile_examples/a_deck_of_cards/ok_3.py
+Function: cards at line 12
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    12                                           def cards(suites, numbers):
+    13                                               """Cards generator."""
+    14     10000     210230.0     21.0    100.0      return [*each_card(suites, numbers)]
+
+profile run-test: commands[5] | cards --times 1000 --print-results
+## module: ng_1
+0:00:00.009943
 cards: ['C 2', 'C 3', 'C 4', 'C 5', 'C 6', 'C 7', 'C 8', 'C 9', 'C A', 'C J', 'C K', 'C Q', 'C T', 'D 2', 'D 3', 'D 4', 'D 5', 'D 6', 'D 7', 'D 8', 'D 9', 'D A', 'D J', 'D K', 'D Q', 'D T', 'H 2', 'H 3', 'H 4', 'H 5', 'H 6', 'H 7', 'H 8', 'H 9', 'H A', 'H J', 'H K', 'H Q', 'H T', 'S 2', 'S 3', 'S 4', 'S 5', 'S 6', 'S 7', 'S 8', 'S 9', 'S A', 'S J', 'S K', 'S Q', 'S T']
 ## module: ng_2
-0:00:00.062669
+0:00:00.006788
 cards: ['C 2', 'C 3', 'C 4', 'C 5', 'C 6', 'C 7', 'C 8', 'C 9', 'C A', 'C J', 'C K', 'C Q', 'C T', 'D 2', 'D 3', 'D 4', 'D 5', 'D 6', 'D 7', 'D 8', 'D 9', 'D A', 'D J', 'D K', 'D Q', 'D T', 'H 2', 'H 3', 'H 4', 'H 5', 'H 6', 'H 7', 'H 8', 'H 9', 'H A', 'H J', 'H K', 'H Q', 'H T', 'S 2', 'S 3', 'S 4', 'S 5', 'S 6', 'S 7', 'S 8', 'S 9', 'S A', 'S J', 'S K', 'S Q', 'S T']
 ## module: ok_1
-0:00:00.057067
+0:00:00.005454
 cards: ['C 2', 'C 3', 'C 4', 'C 5', 'C 6', 'C 7', 'C 8', 'C 9', 'C A', 'C J', 'C K', 'C Q', 'C T', 'D 2', 'D 3', 'D 4', 'D 5', 'D 6', 'D 7', 'D 8', 'D 9', 'D A', 'D J', 'D K', 'D Q', 'D T', 'H 2', 'H 3', 'H 4', 'H 5', 'H 6', 'H 7', 'H 8', 'H 9', 'H A', 'H J', 'H K', 'H Q', 'H T', 'S 2', 'S 3', 'S 4', 'S 5', 'S 6', 'S 7', 'S 8', 'S 9', 'S A', 'S J', 'S K', 'S Q', 'S T']
 ## module: ok_2
-0:00:00.052055
+0:00:00.005036
 cards: ['C 2', 'C 3', 'C 4', 'C 5', 'C 6', 'C 7', 'C 8', 'C 9', 'C A', 'C J', 'C K', 'C Q', 'C T', 'D 2', 'D 3', 'D 4', 'D 5', 'D 6', 'D 7', 'D 8', 'D 9', 'D A', 'D J', 'D K', 'D Q', 'D T', 'H 2', 'H 3', 'H 4', 'H 5', 'H 6', 'H 7', 'H 8', 'H 9', 'H A', 'H J', 'H K', 'H Q', 'H T', 'S 2', 'S 3', 'S 4', 'S 5', 'S 6', 'S 7', 'S 8', 'S 9', 'S A', 'S J', 'S K', 'S Q', 'S T']
 ## module: ok_3
-0:00:00.057026
+0:00:00.005389
 cards: ['C 2', 'C 3', 'C 4', 'C 5', 'C 6', 'C 7', 'C 8', 'C 9', 'C A', 'C J', 'C K', 'C Q', 'C T', 'D 2', 'D 3', 'D 4', 'D 5', 'D 6', 'D 7', 'D 8', 'D 9', 'D A', 'D J', 'D K', 'D Q', 'D T', 'H 2', 'H 3', 'H 4', 'H 5', 'H 6', 'H 7', 'H 8', 'H 9', 'H A', 'H J', 'H K', 'H Q', 'H T', 'S 2', 'S 3', 'S 4', 'S 5', 'S 6', 'S 7', 'S 8', 'S 9', 'S A', 'S J', 'S K', 'S Q', 'S T']
 ___________________________________________________________________________________________ summary ___________________________________________________________________________________________
   profile: commands succeeded
