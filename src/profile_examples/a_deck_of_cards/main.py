@@ -6,6 +6,7 @@ from . import prof, utils
 
 
 DEFAULT_TIMES = 10000
+PROF_NAMES = sorted(prof.PROF_MAP.keys())
 
 
 @click.command()
@@ -21,7 +22,7 @@ DEFAULT_TIMES = 10000
     default='frozenset'
 )
 @click.option(
-    '--profiler', type=click.Choice(['time', 'cProfile', 'line_profiler']),
+    '--profiler', type=click.Choice(PROF_NAMES),
     help='Get profile data using it'
 )
 @click.option(

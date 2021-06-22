@@ -5,6 +5,7 @@ import datetime
 import timeit
 
 import line_profiler
+import memory_profiler
 
 
 def show_with_time(times, cards_fn, suites, numbers, print_results=False):
@@ -54,10 +55,24 @@ def show_with_line_profiler(times, cards_fn, suites, numbers,
         print(f'cards: {sorted(cards)!r}')
 
 
+def show_with_memory_profiler(times, cards_fn, suites, numbers,
+                              print_results=False):
+    """A decorator to show reuslts and time elapsed.
+    """
+    fun = memory_profiler.profile(cards_fn)
+    fun(suites, numbers)
+
+    cards = cards_fn(suites, numbers)
+    if print_results:
+        print(f'cards: {sorted(cards)!r}')
+
+
 PROF_DEFAULT = show_with_time
 PROF_MAP = dict(
+    time=show_with_time,
     cProfile=show_with_profile,
     line_profiler=show_with_line_profiler,
+    memory_profiler=show_with_memory_profiler,
 )
 
 
