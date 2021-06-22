@@ -1,64 +1,115 @@
+ssato@x1-carbon-gen6% tox -e py39                                                                                                  ~/repos/public/github.com/ssato/python-profile-examples.git
+GLOB sdist-make: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/setup.py
+py39 inst-nodeps: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/.tmp/package/1/profile_examples-0.1.0.zip
+py39 installed: astroid==2.5.6,attrs==21.2.0,certifi==2021.5.30,chardet==4.0.0,click==8.0.1,coverage==5.5,coveralls==3.1.0,docopt==0.6.2,execnet==1.9.0,flake8==3.9.2,gprof2dot==2021.2.21,idna==2.10,importlib-metadata==4.5.0,iniconfig==1.1.1,isort==5.9.1,lazy-object-proxy==1.6.0,mccabe==0.6.1,packaging==20.9,pluggy==0.13.1,profile-examples @ file:///home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/.tmp/package/1/profile_examples-0.1.0.zip,psutil==5.8.0,py==1.10.0,pycodestyle==2.7.0,pyflakes==2.3.1,pylint==2.8.3,pyparsing==2.4.7,pytest==6.2.4,pytest-cov==2.12.1,pytest-forked==1.3.0,pytest-profiling==1.7.0,pytest-randomly==3.8.0,pytest-xdist==2.3.0,requests==2.25.1,six==1.16.0,toml==0.10.2,urllib3==1.26.5,wrapt==1.12.1,zipp==3.4.1
+py39 run-test-pre: PYTHONHASHSEED='1470934731'
+py39 run-test: commands[0] | pytest
+===================================================================================== test session starts =====================================================================================
+platform linux -- Python 3.9.5, pytest-6.2.4, py-1.10.0, pluggy-0.13.1
+cachedir: .tox/py39/.pytest_cache
+Using --randomly-seed=1443501130
+rootdir: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git, configfile: setup.cfg, testpaths: tests
+plugins: forked-1.3.0, xdist-2.3.0, randomly-3.8.0, profiling-1.7.0, cov-2.12.1
+gw0 [11] / gw1 [11] / gw2 [11] / gw3 [11]
+...........Coverage.py warning: No data was collected. (no-data-collected)
+Coverage.py warning: No data was collected. (no-data-collected)
+                                                                                                                                                                             [100%]Coverage.py warning: No data was collected. (no-data-collected)
+Coverage.py warning: No data was collected. (no-data-collected)
+
+
+----------- coverage: platform linux, python 3.9.5-final-0 -----------
+Name                                                              Stmts   Miss  Cover
+-------------------------------------------------------------------------------------
+src/profile_examples/__init__.py                                      0      0   100%
+src/profile_examples/a_deck_of_cards/__init__.py                      0      0   100%
+src/profile_examples/a_deck_of_cards/constants.py                     7      7     0%
+src/profile_examples/a_deck_of_cards/main.py                         22     22     0%
+src/profile_examples/a_deck_of_cards/ng_1.py                          8      8     0%
+src/profile_examples/a_deck_of_cards/ng_2.py                          7      7     0%
+src/profile_examples/a_deck_of_cards/ok_1.py                          6      6     0%
+src/profile_examples/a_deck_of_cards/ok_2.py                          3      3     0%
+src/profile_examples/a_deck_of_cards/ok_3.py                          6      6     0%
+src/profile_examples/a_deck_of_cards/prof.py                         43     43     0%
+src/profile_examples/a_deck_of_cards/utils.py                        13     13     0%
+src/profile_examples/fibonacci_number/__init__.py                     0      0   100%
+src/profile_examples/fibonacci_number/constants.py                    5      5     0%
+src/profile_examples/fibonacci_number/fib_binets_formula.py           8      8     0%
+src/profile_examples/fibonacci_number/fib_for_loop.py                 7      7     0%
+src/profile_examples/fibonacci_number/fib_for_loop_with_acc.py       10     10     0%
+src/profile_examples/fibonacci_number/fib_recursive.py                6      6     0%
+src/profile_examples/fibonacci_number/fib_recursive_memoized.py       8      8     0%
+src/profile_examples/fibonacci_number/main.py                        21     21     0%
+src/profile_examples/fibonacci_number/prof.py                        30     30     0%
+src/profile_examples/fibonacci_number/utils.py                        4      4     0%
+src/profile_examples/utils.py                                        10     10     0%
+-------------------------------------------------------------------------------------
+TOTAL                                                               224    224     0%
+
+===================================================================================== 11 passed in 0.86s ======================================================================================
+___________________________________________________________________________________________ summary ___________________________________________________________________________________________
+  py39: commands succeeded
+  congratulations :)
 ssato@x1-carbon-gen6% tox -e profile                                                                                               ~/repos/public/github.com/ssato/python-profile-examples.git
 GLOB sdist-make: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/setup.py
 profile inst-nodeps: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/.tmp/package/1/profile_examples-0.1.0.zip
-profile installed: astroid==2.5.6,attrs==21.2.0,backcall==0.2.0,certifi==2021.5.30,chardet==4.0.0,click==8.0.1,coverage==5.5,coveralls==3.1.0,decorator==5.0.9,docopt==0.6.2,execnet==1.9.0,flake8==3.9.2,gprof2dot==2021.2.21,idna==2.10,importlib-metadata==4.5.0,iniconfig==1.1.1,ipython==7.24.1,ipython-genutils==0.2.0,isort==5.9.1,jedi==0.18.0,lazy-object-proxy==1.6.0,line-profiler==3.3.0,matplotlib-inline==0.1.2,mccabe==0.6.1,packaging==20.9,parso==0.8.2,pexpect==4.8.0,pickleshare==0.7.5,pluggy==0.13.1,profile-examples @ file:///home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/.tmp/package/1/profile_examples-0.1.0.zip,prompt-toolkit==3.0.19,psutil==5.8.0,ptyprocess==0.7.0,py==1.10.0,pycodestyle==2.7.0,pyflakes==2.3.1,Pygments==2.9.0,pylint==2.8.3,pyparsing==2.4.7,pytest==6.2.4,pytest-cov==2.12.1,pytest-forked==1.3.0,pytest-profiling==1.7.0,pytest-randomly==3.8.0,pytest-xdist==2.3.0,requests==2.25.1,six==1.16.0,toml==0.10.2,traitlets==5.0.5,urllib3==1.26.5,wcwidth==0.2.5,wrapt==1.12.1,zipp==3.4.1
-profile run-test-pre: PYTHONHASHSEED='791764908'
+profile installed: astroid==2.5.6,attrs==21.2.0,backcall==0.2.0,certifi==2021.5.30,chardet==4.0.0,click==8.0.1,coverage==5.5,coveralls==3.1.0,decorator==5.0.9,docopt==0.6.2,execnet==1.9.0,flake8==3.9.2,gprof2dot==2021.2.21,idna==2.10,importlib-metadata==4.5.0,iniconfig==1.1.1,ipython==7.24.1,ipython-genutils==0.2.0,isort==5.9.1,jedi==0.18.0,lazy-object-proxy==1.6.0,line-profiler==3.3.0,matplotlib-inline==0.1.2,mccabe==0.6.1,memory-profiler==0.58.0,packaging==20.9,parso==0.8.2,pexpect==4.8.0,pickleshare==0.7.5,pluggy==0.13.1,profile-examples @ file:///home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/.tmp/package/1/profile_examples-0.1.0.zip,prompt-toolkit==3.0.19,psutil==5.8.0,ptyprocess==0.7.0,py==1.10.0,pycodestyle==2.7.0,pyflakes==2.3.1,Pygments==2.9.0,pylint==2.8.3,pyparsing==2.4.7,pytest==6.2.4,pytest-cov==2.12.1,pytest-forked==1.3.0,pytest-profiling==1.7.0,pytest-randomly==3.8.0,pytest-xdist==2.3.0,requests==2.25.1,six==1.16.0,toml==0.10.2,traitlets==5.0.5,urllib3==1.26.5,wcwidth==0.2.5,wrapt==1.12.1,zipp==3.4.1
+profile run-test-pre: PYTHONHASHSEED='963049106'
 profile run-test: commands[0] | cards --times 10000
 ## module: ng_1
-0:00:00.093208
+0:00:00.092425
 ## module: ng_2
-0:00:00.060764
+0:00:00.059846
 ## module: ok_1
-0:00:00.055140
+0:00:00.054742
 ## module: ok_2
-0:00:00.051406
+0:00:00.051024
 ## module: ok_3
-0:00:00.055988
+0:00:00.054443
 profile run-test: commands[1] | cards --times 10000 --collection-type list
 ## module: ng_1
-0:00:00.092063
+0:00:00.090637
 ## module: ng_2
-0:00:00.057688
+0:00:00.056637
 ## module: ok_1
-0:00:00.052961
+0:00:00.052101
 ## module: ok_2
-0:00:00.050718
+0:00:00.049590
 ## module: ok_3
-0:00:00.052689
+0:00:00.051358
 profile run-test: commands[2] | cards --times 10000 --collection-type tuple
 ## module: ng_1
-0:00:00.092317
+0:00:00.094195
 ## module: ng_2
-0:00:00.058678
+0:00:00.059391
 ## module: ok_1
-0:00:00.053169
+0:00:00.054098
 ## module: ok_2
-0:00:00.050222
+0:00:00.050958
 ## module: ok_3
-0:00:00.052859
+0:00:00.054053
 profile run-test: commands[3] | cards --times 10000 --profiler cProfile
 ## module: ng_1
-         580002 function calls in 0.165 seconds
+         580002 function calls in 0.166 seconds
 
    Ordered by: standard name
 
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-    10000    0.127    0.000    0.160    0.000 ng_1.py:5(cards)
-        1    0.005    0.005    0.165    0.165 prof.py:22(run_fun_times)
+    10000    0.129    0.000    0.161    0.000 ng_1.py:5(cards)
+        1    0.005    0.005    0.166    0.166 prof.py:23(run_fun_times)
     50000    0.003    0.000    0.003    0.000 {built-in method builtins.len}
-   520000    0.030    0.000    0.030    0.000 {method 'append' of 'list' objects}
+   520000    0.029    0.000    0.029    0.000 {method 'append' of 'list' objects}
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
 
 
 ## module: ng_2
-         530002 function calls in 0.129 seconds
+         530002 function calls in 0.127 seconds
 
    Ordered by: standard name
 
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-    10000    0.094    0.000    0.123    0.000 ng_2.py:5(cards)
-        1    0.005    0.005    0.129    0.129 prof.py:22(run_fun_times)
-   520000    0.030    0.000    0.030    0.000 {method 'append' of 'list' objects}
+    10000    0.093    0.000    0.122    0.000 ng_2.py:5(cards)
+        1    0.005    0.005    0.127    0.127 prof.py:23(run_fun_times)
+   520000    0.029    0.000    0.029    0.000 {method 'append' of 'list' objects}
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
 
 
@@ -70,31 +121,31 @@ profile run-test: commands[3] | cards --times 10000 --profiler cProfile
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
     10000    0.043    0.000    0.112    0.000 ok_1.py:12(cards)
    530000    0.069    0.000    0.069    0.000 ok_1.py:5(each_card)
-        1    0.005    0.005    0.117    0.117 prof.py:22(run_fun_times)
+        1    0.005    0.005    0.117    0.117 prof.py:23(run_fun_times)
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
 
 
 ## module: ok_2
-         20002 function calls in 0.055 seconds
+         20002 function calls in 0.054 seconds
 
    Ordered by: standard name
 
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-    10000    0.006    0.000    0.050    0.000 ok_2.py:6(cards)
-    10000    0.044    0.000    0.044    0.000 ok_2.py:8(<listcomp>)
-        1    0.005    0.005    0.055    0.055 prof.py:22(run_fun_times)
+    10000    0.006    0.000    0.049    0.000 ok_2.py:6(cards)
+    10000    0.043    0.000    0.043    0.000 ok_2.py:8(<listcomp>)
+        1    0.005    0.005    0.054    0.054 prof.py:23(run_fun_times)
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
 
 
 ## module: ok_3
-         540002 function calls in 0.117 seconds
+         540002 function calls in 0.115 seconds
 
    Ordered by: standard name
 
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-    10000    0.043    0.000    0.112    0.000 ok_3.py:12(cards)
+    10000    0.042    0.000    0.110    0.000 ok_3.py:12(cards)
    530000    0.068    0.000    0.068    0.000 ok_3.py:5(each_card)
-        1    0.005    0.005    0.117    0.117 prof.py:22(run_fun_times)
+        1    0.005    0.005    0.115    0.115 prof.py:23(run_fun_times)
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
 
 
@@ -102,7 +153,7 @@ profile run-test: commands[4] | cards --times 10000 --profiler line_profiler
 ## module: ng_1
 Timer unit: 1e-06 s
 
-Total time: 0.570473 s
+Total time: 0.59125 s
 File: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/profile/lib/python3.9/site-packages/profile_examples/a_deck_of_cards/ng_1.py
 Function: cards at line 5
 
@@ -110,19 +161,19 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 ==============================================================
      5                                           def cards(suites, numbers):
      6                                               """Cards generator."""
-     7     10000       3217.0      0.3      0.6      res = []
-     8     10000       5629.0      0.6      1.0      (suites, numbers) = (list(suites), list(numbers))
-     9     50000      15997.0      0.3      2.8      for i in range(len(suites)):
-    10    560000     160132.0      0.3     28.1          for j in range(len(numbers)):
-    11    520000     207393.0      0.4     36.4              card = suites[i] + ' ' + numbers[j]
-    12    520000     175665.0      0.3     30.8              res.append(card)
+     7     10000       3357.0      0.3      0.6      res = []
+     8     10000       5658.0      0.6      1.0      (suites, numbers) = (list(suites), list(numbers))
+     9     50000      16227.0      0.3      2.7      for i in range(len(suites)):
+    10    560000     164070.0      0.3     27.7          for j in range(len(numbers)):
+    11    520000     213216.0      0.4     36.1              card = suites[i] + ' ' + numbers[j]
+    12    520000     186198.0      0.4     31.5              res.append(card)
     13
-    14     10000       2440.0      0.2      0.4      return res
+    14     10000       2524.0      0.3      0.4      return res
 
 ## module: ng_2
 Timer unit: 1e-06 s
 
-Total time: 0.502086 s
+Total time: 0.514951 s
 File: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/profile/lib/python3.9/site-packages/profile_examples/a_deck_of_cards/ng_2.py
 Function: cards at line 5
 
@@ -130,18 +181,18 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 ==============================================================
      5                                           def cards(suites, numbers):
      6                                               """Cards generator."""
-     7     10000       3041.0      0.3      0.6      res = []
-     8     50000      14114.0      0.3      2.8      for suite in suites:
-     9    560000     149178.0      0.3     29.7          for number in numbers:
-    10    520000     166297.0      0.3     33.1              card = f'{suite} {number}'
-    11    520000     167112.0      0.3     33.3              res.append(card)
+     7     10000       3168.0      0.3      0.6      res = []
+     8     50000      14173.0      0.3      2.8      for suite in suites:
+     9    560000     150571.0      0.3     29.2          for number in numbers:
+    10    520000     170077.0      0.3     33.0              card = f'{suite} {number}'
+    11    520000     174613.0      0.3     33.9              res.append(card)
     12
-    13     10000       2344.0      0.2      0.5      return res
+    13     10000       2349.0      0.2      0.5      return res
 
 ## module: ok_1
 Timer unit: 1e-06 s
 
-Total time: 0.212936 s
+Total time: 0.216832 s
 File: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/profile/lib/python3.9/site-packages/profile_examples/a_deck_of_cards/ok_1.py
 Function: cards at line 12
 
@@ -149,12 +200,12 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 ==============================================================
     12                                           def cards(suites, numbers):
     13                                               """Cards generator."""
-    14     10000     212936.0     21.3    100.0      return list(each_card(suites, numbers))
+    14     10000     216832.0     21.7    100.0      return list(each_card(suites, numbers))
 
 ## module: ok_2
 Timer unit: 1e-06 s
 
-Total time: 0.100869 s
+Total time: 0.102976 s
 File: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/profile/lib/python3.9/site-packages/profile_examples/a_deck_of_cards/ok_2.py
 Function: cards at line 6
 
@@ -162,12 +213,12 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 ==============================================================
      6                                           def cards(suites, numbers):
      7                                               """Cards generator."""
-     8     10000     100869.0     10.1    100.0      return [f'{s} {n}' for s, n in itertools.product(suites, numbers)]
+     8     10000     102976.0     10.3    100.0      return [f'{s} {n}' for s, n in itertools.product(suites, numbers)]
 
 ## module: ok_3
 Timer unit: 1e-06 s
 
-Total time: 0.21023 s
+Total time: 0.215471 s
 File: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/profile/lib/python3.9/site-packages/profile_examples/a_deck_of_cards/ok_3.py
 Function: cards at line 12
 
@@ -175,24 +226,369 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 ==============================================================
     12                                           def cards(suites, numbers):
     13                                               """Cards generator."""
-    14     10000     210230.0     21.0    100.0      return [*each_card(suites, numbers)]
+    14     10000     215471.0     21.5    100.0      return [*each_card(suites, numbers)]
 
-profile run-test: commands[5] | cards --times 1000 --print-results
+profile run-test: commands[5] | cards --times 10000 --profiler memory_profiler
 ## module: ng_1
-0:00:00.009943
-cards: ['C 2', 'C 3', 'C 4', 'C 5', 'C 6', 'C 7', 'C 8', 'C 9', 'C A', 'C J', 'C K', 'C Q', 'C T', 'D 2', 'D 3', 'D 4', 'D 5', 'D 6', 'D 7', 'D 8', 'D 9', 'D A', 'D J', 'D K', 'D Q', 'D T', 'H 2', 'H 3', 'H 4', 'H 5', 'H 6', 'H 7', 'H 8', 'H 9', 'H A', 'H J', 'H K', 'H Q', 'H T', 'S 2', 'S 3', 'S 4', 'S 5', 'S 6', 'S 7', 'S 8', 'S 9', 'S A', 'S J', 'S K', 'S Q', 'S T']
+Filename: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/profile/lib/python3.9/site-packages/profile_examples/a_deck_of_cards/ng_1.py
+
+Line #    Mem usage    Increment  Occurences   Line Contents
+============================================================
+     5     39.5 MiB     39.5 MiB           1   def cards(suites, numbers):
+     6                                             """Cards generator."""
+     7     39.5 MiB      0.0 MiB           1       res = []
+     8     39.5 MiB      0.0 MiB           1       (suites, numbers) = (list(suites), list(numbers))
+     9     39.5 MiB      0.0 MiB           5       for i in range(len(suites)):
+    10     39.5 MiB      0.0 MiB          56           for j in range(len(numbers)):
+    11     39.5 MiB      0.0 MiB          52               card = suites[i] + ' ' + numbers[j]
+    12     39.5 MiB      0.0 MiB          52               res.append(card)
+    13
+    14     39.5 MiB      0.0 MiB           1       return res
+
+
 ## module: ng_2
-0:00:00.006788
-cards: ['C 2', 'C 3', 'C 4', 'C 5', 'C 6', 'C 7', 'C 8', 'C 9', 'C A', 'C J', 'C K', 'C Q', 'C T', 'D 2', 'D 3', 'D 4', 'D 5', 'D 6', 'D 7', 'D 8', 'D 9', 'D A', 'D J', 'D K', 'D Q', 'D T', 'H 2', 'H 3', 'H 4', 'H 5', 'H 6', 'H 7', 'H 8', 'H 9', 'H A', 'H J', 'H K', 'H Q', 'H T', 'S 2', 'S 3', 'S 4', 'S 5', 'S 6', 'S 7', 'S 8', 'S 9', 'S A', 'S J', 'S K', 'S Q', 'S T']
+Filename: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/profile/lib/python3.9/site-packages/profile_examples/a_deck_of_cards/ng_2.py
+
+Line #    Mem usage    Increment  Occurences   Line Contents
+============================================================
+     5     39.8 MiB     39.8 MiB           1   def cards(suites, numbers):
+     6                                             """Cards generator."""
+     7     39.8 MiB      0.0 MiB           1       res = []
+     8     39.8 MiB      0.0 MiB           5       for suite in suites:
+     9     39.8 MiB      0.0 MiB          56           for number in numbers:
+    10     39.8 MiB      0.0 MiB          52               card = f'{suite} {number}'
+    11     39.8 MiB      0.0 MiB          52               res.append(card)
+    12
+    13     39.8 MiB      0.0 MiB           1       return res
+
+
 ## module: ok_1
-0:00:00.005454
-cards: ['C 2', 'C 3', 'C 4', 'C 5', 'C 6', 'C 7', 'C 8', 'C 9', 'C A', 'C J', 'C K', 'C Q', 'C T', 'D 2', 'D 3', 'D 4', 'D 5', 'D 6', 'D 7', 'D 8', 'D 9', 'D A', 'D J', 'D K', 'D Q', 'D T', 'H 2', 'H 3', 'H 4', 'H 5', 'H 6', 'H 7', 'H 8', 'H 9', 'H A', 'H J', 'H K', 'H Q', 'H T', 'S 2', 'S 3', 'S 4', 'S 5', 'S 6', 'S 7', 'S 8', 'S 9', 'S A', 'S J', 'S K', 'S Q', 'S T']
+Filename: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/profile/lib/python3.9/site-packages/profile_examples/a_deck_of_cards/ok_1.py
+
+Line #    Mem usage    Increment  Occurences   Line Contents
+============================================================
+    12     39.8 MiB     39.8 MiB           1   def cards(suites, numbers):
+    13                                             """Cards generator."""
+    14     39.8 MiB      0.0 MiB           1       return list(each_card(suites, numbers))
+
+
 ## module: ok_2
-0:00:00.005036
-cards: ['C 2', 'C 3', 'C 4', 'C 5', 'C 6', 'C 7', 'C 8', 'C 9', 'C A', 'C J', 'C K', 'C Q', 'C T', 'D 2', 'D 3', 'D 4', 'D 5', 'D 6', 'D 7', 'D 8', 'D 9', 'D A', 'D J', 'D K', 'D Q', 'D T', 'H 2', 'H 3', 'H 4', 'H 5', 'H 6', 'H 7', 'H 8', 'H 9', 'H A', 'H J', 'H K', 'H Q', 'H T', 'S 2', 'S 3', 'S 4', 'S 5', 'S 6', 'S 7', 'S 8', 'S 9', 'S A', 'S J', 'S K', 'S Q', 'S T']
+Filename: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/profile/lib/python3.9/site-packages/profile_examples/a_deck_of_cards/ok_2.py
+
+Line #    Mem usage    Increment  Occurences   Line Contents
+============================================================
+     6     39.8 MiB     39.8 MiB           1   def cards(suites, numbers):
+     7                                             """Cards generator."""
+     8     39.8 MiB      0.0 MiB          55       return [f'{s} {n}' for s, n in itertools.product(suites, numbers)]
+
+
 ## module: ok_3
-0:00:00.005389
-cards: ['C 2', 'C 3', 'C 4', 'C 5', 'C 6', 'C 7', 'C 8', 'C 9', 'C A', 'C J', 'C K', 'C Q', 'C T', 'D 2', 'D 3', 'D 4', 'D 5', 'D 6', 'D 7', 'D 8', 'D 9', 'D A', 'D J', 'D K', 'D Q', 'D T', 'H 2', 'H 3', 'H 4', 'H 5', 'H 6', 'H 7', 'H 8', 'H 9', 'H A', 'H J', 'H K', 'H Q', 'H T', 'S 2', 'S 3', 'S 4', 'S 5', 'S 6', 'S 7', 'S 8', 'S 9', 'S A', 'S J', 'S K', 'S Q', 'S T']
+Filename: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/profile/lib/python3.9/site-packages/profile_examples/a_deck_of_cards/ok_3.py
+
+Line #    Mem usage    Increment  Occurences   Line Contents
+============================================================
+    12     39.8 MiB     39.8 MiB           1   def cards(suites, numbers):
+    13                                             """Cards generator."""
+    14     39.8 MiB      0.0 MiB           1       return [*each_card(suites, numbers)]
+
+
+profile run-test: commands[6] | fibs --times 30
+## module: fib_binets_formula
+0:00:00.000134
+## module: fib_for_loop
+0:00:00.000083
+## module: fib_for_loop_with_acc
+0:00:00.000124
+## module: fib_recursive
+0:00:00.000075
+## module: fib_recursive_memoized
+0:00:00.000076
+## module: fib_binets_formula
+         62 function calls in 0.000 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+       30    0.000    0.000    0.000    0.000 fib_binets_formula.py:17(fibs)
+       30    0.000    0.000    0.000    0.000 fib_binets_formula.py:20(<listcomp>)
+        1    0.000    0.000    0.000    0.000 prof.py:11(run_fn)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+## module: fib_for_loop
+         62 function calls in 0.000 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+       30    0.000    0.000    0.000    0.000 fib_for_loop.py:17(fibs)
+       30    0.000    0.000    0.000    0.000 fib_for_loop.py:19(<listcomp>)
+        1    0.000    0.000    0.000    0.000 prof.py:11(run_fn)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+## module: fib_for_loop_with_acc
+         902 function calls in 0.000 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+       30    0.000    0.000    0.000    0.000 fib_for_loop_with_acc.py:5(fibs)
+        1    0.000    0.000    0.000    0.000 prof.py:11(run_fn)
+      870    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+## module: fib_recursive
+         62 function calls in 0.000 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+       30    0.000    0.000    0.000    0.000 fib_recursive.py:13(fibs)
+       30    0.000    0.000    0.000    0.000 fib_recursive.py:15(<listcomp>)
+        1    0.000    0.000    0.000    0.000 prof.py:11(run_fn)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+## module: fib_recursive_memoized
+         62 function calls in 0.000 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+       30    0.000    0.000    0.000    0.000 fib_recursive_memoized.py:15(fibs)
+       30    0.000    0.000    0.000    0.000 fib_recursive_memoized.py:17(<listcomp>)
+        1    0.000    0.000    0.000    0.000 prof.py:11(run_fn)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+## module: fib_binets_formula
+Timer unit: 1e-06 s
+
+Total time: 0.000248 s
+File: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/profile/lib/python3.9/site-packages/profile_examples/fibonacci_number/fib_binets_formula.py
+Function: fibs at line 17
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    17                                           def fibs(nmax):
+    18                                               """Compute fibonacci number."""
+    19        30         11.0      0.4      4.4      acc = [0, 1]  # Fib(0), Fib(1)
+    20        30        237.0      7.9     95.6      return acc + [int(fib(n)) for n in range(2, nmax + 1)]
+
+## module: fib_for_loop
+Timer unit: 1e-06 s
+
+Total time: 0.000195 s
+File: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/profile/lib/python3.9/site-packages/profile_examples/fibonacci_number/fib_for_loop.py
+Function: fibs at line 17
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    17                                           def fibs(nmax):
+    18                                               """Compute fibonacci numbers."""
+    19        30        195.0      6.5    100.0      return [0, 1] + [fib(n) for n in range(2, nmax + 1)]
+
+## module: fib_for_loop_with_acc
+Timer unit: 1e-06 s
+
+Total time: 0.001605 s
+File: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/profile/lib/python3.9/site-packages/profile_examples/fibonacci_number/fib_for_loop_with_acc.py
+Function: fibs at line 5
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+     5                                           def fibs(nmax):
+     6                                               """Compute fibonacci number."""
+     7        30         11.0      0.4      0.7      acc = [0, 1]  # Fib(0), Fib(1)
+     8
+     9        30         10.0      0.3      0.6      if nmax < 2:
+    10                                                   return acc[:nmax + 1]
+    11
+    12       900        323.0      0.4     20.1      for n in range(2, nmax + 1):
+    13       870        294.0      0.3     18.3          fib_n_1 = acc[n - 1]
+    14       870        303.0      0.3     18.9          fib_n_2 = acc[n - 2]
+    15       870        307.0      0.4     19.1          fib_n = fib_n_1 + fib_n_2
+    16       870        348.0      0.4     21.7          acc.append(fib_n)
+    17
+    18        30          9.0      0.3      0.6      return acc
+
+## module: fib_recursive
+Timer unit: 1e-06 s
+
+Total time: 0.000177 s
+File: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/profile/lib/python3.9/site-packages/profile_examples/fibonacci_number/fib_recursive.py
+Function: fibs at line 13
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    13                                           def fibs(nmax):
+    14                                               """Compute fibonacci numbers."""
+    15        30        177.0      5.9    100.0      return [fib(n) for n in range(nmax + 1)]
+
+## module: fib_recursive_memoized
+Timer unit: 1e-06 s
+
+Total time: 0.000173 s
+File: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/profile/lib/python3.9/site-packages/profile_examples/fibonacci_number/fib_recursive_memoized.py
+Function: fibs at line 15
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    15                                           def fibs(nmax):
+    16                                               """Compute fibonacci numbers."""
+    17        30        173.0      5.8    100.0      return [fib(n) for n in range(nmax + 1)]
+
+profile run-test: commands[7] | fibs --nmax 30 --times 1 --print-results
+## module: fib_binets_formula
+0:00:00.000020
+## module: fib_for_loop
+0:00:00.000004
+## module: fib_for_loop_with_acc
+0:00:00.000005
+## module: fib_recursive
+0:00:00.000004
+## module: fib_recursive_memoized
+0:00:00.000003
+## module: fib_binets_formula
+         4 function calls in 0.000 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 fib_binets_formula.py:17(fibs)
+        1    0.000    0.000    0.000    0.000 fib_binets_formula.py:20(<listcomp>)
+        1    0.000    0.000    0.000    0.000 prof.py:11(run_fn)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+## module: fib_for_loop
+         4 function calls in 0.000 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 fib_for_loop.py:17(fibs)
+        1    0.000    0.000    0.000    0.000 fib_for_loop.py:19(<listcomp>)
+        1    0.000    0.000    0.000    0.000 prof.py:11(run_fn)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+## module: fib_for_loop_with_acc
+         32 function calls in 0.000 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 fib_for_loop_with_acc.py:5(fibs)
+        1    0.000    0.000    0.000    0.000 prof.py:11(run_fn)
+       29    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+## module: fib_recursive
+         4 function calls in 0.000 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 fib_recursive.py:13(fibs)
+        1    0.000    0.000    0.000    0.000 fib_recursive.py:15(<listcomp>)
+        1    0.000    0.000    0.000    0.000 prof.py:11(run_fn)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+## module: fib_recursive_memoized
+         4 function calls in 0.000 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 fib_recursive_memoized.py:15(fibs)
+        1    0.000    0.000    0.000    0.000 fib_recursive_memoized.py:17(<listcomp>)
+        1    0.000    0.000    0.000    0.000 prof.py:11(run_fn)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+## module: fib_binets_formula
+Timer unit: 1e-06 s
+
+Total time: 1e-05 s
+File: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/profile/lib/python3.9/site-packages/profile_examples/fibonacci_number/fib_binets_formula.py
+Function: fibs at line 17
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    17                                           def fibs(nmax):
+    18                                               """Compute fibonacci number."""
+    19         1          1.0      1.0     10.0      acc = [0, 1]  # Fib(0), Fib(1)
+    20         1          9.0      9.0     90.0      return acc + [int(fib(n)) for n in range(2, nmax + 1)]
+
+## module: fib_for_loop
+Timer unit: 1e-06 s
+
+Total time: 8e-06 s
+File: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/profile/lib/python3.9/site-packages/profile_examples/fibonacci_number/fib_for_loop.py
+Function: fibs at line 17
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    17                                           def fibs(nmax):
+    18                                               """Compute fibonacci numbers."""
+    19         1          8.0      8.0    100.0      return [0, 1] + [fib(n) for n in range(2, nmax + 1)]
+
+## module: fib_for_loop_with_acc
+Timer unit: 1e-06 s
+
+Total time: 6.5e-05 s
+File: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/profile/lib/python3.9/site-packages/profile_examples/fibonacci_number/fib_for_loop_with_acc.py
+Function: fibs at line 5
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+     5                                           def fibs(nmax):
+     6                                               """Compute fibonacci number."""
+     7         1          1.0      1.0      1.5      acc = [0, 1]  # Fib(0), Fib(1)
+     8
+     9         1          0.0      0.0      0.0      if nmax < 2:
+    10                                                   return acc[:nmax + 1]
+    11
+    12        30          9.0      0.3     13.8      for n in range(2, nmax + 1):
+    13        29         11.0      0.4     16.9          fib_n_1 = acc[n - 1]
+    14        29          6.0      0.2      9.2          fib_n_2 = acc[n - 2]
+    15        29         12.0      0.4     18.5          fib_n = fib_n_1 + fib_n_2
+    16        29         26.0      0.9     40.0          acc.append(fib_n)
+    17
+    18         1          0.0      0.0      0.0      return acc
+
+## module: fib_recursive
+Timer unit: 1e-06 s
+
+Total time: 8e-06 s
+File: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/profile/lib/python3.9/site-packages/profile_examples/fibonacci_number/fib_recursive.py
+Function: fibs at line 13
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    13                                           def fibs(nmax):
+    14                                               """Compute fibonacci numbers."""
+    15         1          8.0      8.0    100.0      return [fib(n) for n in range(nmax + 1)]
+
+## module: fib_recursive_memoized
+Timer unit: 1e-06 s
+
+Total time: 7e-06 s
+File: /home/ssato/repos/public/github.com/ssato/python-profile-examples.git/.tox/profile/lib/python3.9/site-packages/profile_examples/fibonacci_number/fib_recursive_memoized.py
+Function: fibs at line 15
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    15                                           def fibs(nmax):
+    16                                               """Compute fibonacci numbers."""
+    17         1          7.0      7.0    100.0      return [fib(n) for n in range(nmax + 1)]
+
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, 514229, 832040]
 ___________________________________________________________________________________________ summary ___________________________________________________________________________________________
   profile: commands succeeded
   congratulations :)
