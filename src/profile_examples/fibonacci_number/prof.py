@@ -51,6 +51,7 @@ def run_with_line_profiler(fun, nmax, times):
 def run_with_memory_profiler(fun, nmax, times):
     """A decorator to show reuslts and time elapsed.
     """
+    # backend: psuitl [default], posix, tracemalloc
     fun = memory_profiler.profile(fun)
     return run_fn(fun, nmax, times)
 
@@ -59,5 +60,5 @@ RUN_WITH_PROF_FNS = (
     run_with_time,
     run_with_profile,
     run_with_line_profiler,
-    # run_with_memory_profiler
+    run_with_memory_profiler
 )
