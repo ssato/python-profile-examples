@@ -1,5 +1,6 @@
 """main.
 """
+import collections
 import cProfile
 import datetime
 import timeit
@@ -56,9 +57,9 @@ def run_with_memory_profiler(fun, nmax, times):
     return run_fn(fun, nmax, times)
 
 
-RUN_WITH_PROF_FNS = (
-    run_with_time,
-    run_with_profile,
-    run_with_line_profiler,
-    run_with_memory_profiler
-)
+RUN_WITH_PROF_FNS = collections.OrderedDict((
+    (run_with_time, True),
+    (run_with_profile, True),
+    (run_with_line_profiler, True),
+    (run_with_memory_profiler, False)
+))

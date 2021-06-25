@@ -26,12 +26,20 @@ CURDIR = pathlib.Path(__file__).parent
     help='How many times to run target functions'
 )
 @click.option(
+    '--full', is_flag=True, help='Get full profiling data'
+)
+@click.option(
     '--print-results', is_flag=True, help='Print out computed results also'
 )
-def main(nmax=DEFAULT_MAX, times=DEFAULT_TIMES, print_results=False):
+def main(nmax=DEFAULT_MAX, times=DEFAULT_TIMES, full=False,
+         print_results=False):
     """Compute and show the fiboonacci numbers.
     """
-    profile_fns = prof.RUN_WITH_PROF_FNS
+    if full:
+        profile_fns = list(prof.RUN_WITH_PROF_FNS.keys())
+    else:
+        profile_fns = [p for p, flg in prof.RUN_WITH_PROF_FNS.items() if flg]
+
     fib_fns = utils.list_fibs_functions()
 
     for pfn in profile_fns:
