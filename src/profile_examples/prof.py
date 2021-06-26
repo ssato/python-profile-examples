@@ -43,10 +43,8 @@ def run_with_memory_profiler(func, *args, **kwargs):
     """Show reuslts and memory profile using memory_profiler."""
     # .. note::
     #    I don't know how to profile wrapped functions *and* call wrapper
-    #    functions like run_with_memory_profiler does. So, what we will get by
-    #    the following code are not the profiling results of wrapper functions
-    #    but of wrapper functions actually.
-    pfn = memory_profiler.profile(inspect.unwrap(func))
+    #    functions like run_with_memory_profiler does.
+    pfn = memory_profiler.profile(func)
     return pfn(*args, **kwargs)
 
 
