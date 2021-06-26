@@ -61,6 +61,17 @@ def memoized_tarai_3(x, y, z):
     )
 
 
+@functools.lru_cache(None)
+def memoized_tarai_4(x, y, z):
+    if x <= y:
+        return y
+
+    return memoized_tarai_4(
+        memoized_tarai_4(x - 1, y, z), memoized_tarai_4(y - 1, z, x),
+        memoized_tarai_4(z - 1, x, y)
+    )
+
+
 # Hacks.
 setattr(
     memoized_tarai_2,
@@ -71,4 +82,13 @@ setattr(
     memoized_tarai_3,
     '__doc__',
     'Memoized version of tarai(x, y, z) using functools.lru_cache.'
+)
+setattr(
+    memoized_tarai_4,
+    '__doc__',
+    'Memoized version of tarai(x, y, z) using functools.lru_cache(None).'
+)
+
+CALLABLES = (
+    tarai, memoized_tarai, memoized_tarai_2, memoized_tarai_3, memoized_tarai_4
 )

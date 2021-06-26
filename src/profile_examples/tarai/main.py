@@ -52,11 +52,7 @@ def main(
     xyz = [int(i) for i in values.split(',')]
     assert len(xyz) == 3, f'Wrong argument was given for --value, {xyz}'
 
-    funcs = (
-        tarai.tarai, tarai.memoized_tarai, tarai.memoized_tarai_2,
-        tarai.memoized_tarai_3
-    )
-    runner = prof.ProfiledRunner(funcs, full, show_results)
+    runner = prof.ProfiledRunner(tarai.CALLABLES, full, show_results)
     runner.run(*xyz)
     # todo:
     # if other_types:
