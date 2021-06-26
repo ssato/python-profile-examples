@@ -22,12 +22,12 @@ def memoized_tarai(x, y, z, acc=None):
     if x <= y:
         return y
 
-    if acc is not None:
+    if acc is None:
+        acc = dict()
+    else:
         val = acc.get((x, y, z), None)
         if val is not None:
             return val
-    else:
-        acc = dict()
 
     val = memoized_tarai(
         memoized_tarai(x - 1, y, z, acc=acc),
