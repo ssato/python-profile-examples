@@ -3,6 +3,7 @@
 import collections
 import cProfile
 import datetime
+import inspect
 import timeit
 
 import line_profiler
@@ -31,7 +32,7 @@ def run_with_profile(func, *args, **kwargs):
 def run_with_line_profiler(func, *args, **kwargs):
     """Show reuslts and time profile using line_profiler."""
     prof = line_profiler.LineProfiler()
-    prof.add_function(func)
+    prof.add_function(inspect.unwrap(func))
     res = prof.runcall(func, *args, **kwargs)
     prof.print_stats()
 
@@ -40,8 +41,12 @@ def run_with_line_profiler(func, *args, **kwargs):
 
 def run_with_memory_profiler(func, *args, **kwargs):
     """Show reuslts and memory profile using memory_profiler."""
-    # backend: psuitl [default], posix, tracemalloc
-    pfn = memory_profiler.profile(func)
+    # .. note::
+    #    I don't know how to profile wrapped functions *and* call wrapper
+    #    functions like run_with_memory_profiler does. So, what we will get by
+    #    the following code are not the profiling results of wrapper functions
+    #    but of wrapper functions actually.
+    pfn = memory_profiler.profile(inspect.unwrap(func))
     return pfn(*args, **kwargs)
 
 
