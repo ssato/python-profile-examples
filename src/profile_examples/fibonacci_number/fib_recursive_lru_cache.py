@@ -3,7 +3,7 @@
 import functools
 
 
-@functools.lru_cache(None)
+@functools.lru_cache()
 def fib(num):
     """Compute fibonacci number."""
     if num in (0, 1):  # fib(0) == 0, fib(1) == 1
