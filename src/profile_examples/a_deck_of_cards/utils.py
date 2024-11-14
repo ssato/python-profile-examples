@@ -1,6 +1,6 @@
 """main.
 """
-import importlib
+import importlib.util
 
 from .constants import CURDIR, MOD_FILENAME_RE, SNS_MAP
 

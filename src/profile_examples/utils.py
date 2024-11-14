@@ -1,6 +1,6 @@
 """main.
 """
-import importlib
+import importlib.util
 
 
 def list_modules(curdir, pattern):
